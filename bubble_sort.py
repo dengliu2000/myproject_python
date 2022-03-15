@@ -11,3 +11,17 @@ a=[5,3,4,1,7,2,6,8]
 bubble_sort(a)
 print("a:")
 print(a)
+def bubble_sort2(arr):
+    for i in range(len(arr)-1,-1,-1):
+        for j in range(i):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+        print('第%d次排序後的結果是:' %(len(arr)-i),end='')
+        for j in range(len(arr)):
+            print('%d' %arr[j],end='')
+        print()
+    print('排序後的結果:')
+    for j in range(len(arr)):
+        print('%d' %arr[j],end='')
+    print()
+bubble_sort2(a)
